@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-* "Aybars Abdullah Dikmeci"
+* by "Aybars Abdullah Dikmeci"
