@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    
   end
 
   # POST /articles or /articles.json
@@ -26,6 +27,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
+        #flash[:notice]="Article was successfully created." bi alt satirdakini yapabilmek  icin yazilan alternatif kod
         format.html { redirect_to @article, notice: "Article was successfully created." }
         format.json { render :show, status: :created, location: @article }
       else
