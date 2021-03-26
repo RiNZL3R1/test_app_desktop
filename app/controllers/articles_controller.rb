@@ -18,12 +18,12 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    
+    article =Article.find(params[:id])
   end
 
   # POST /articles or /articles.json
   def create
-    @article = Article.new(article_params)
+    @article = Article.new(article_params)#@article = Article.new(params.require(:article).permit(:title, :description))
 
     respond_to do |format|
       if @article.save
@@ -39,6 +39,13 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
+   # @article = Article.find(params[:id])
+   # if  @article.update(params.require(:article).permit(:title, :description))
+   #   flash[:notice]="Article was successfully updated."
+   #   redirect_to @article
+   # else
+   #   render 'edit'      
+   # end 
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: "Article was successfully updated." }
@@ -52,6 +59,10 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1 or /articles/1.json
   def destroy
+   # @article = Article.find(params[:id])
+   # @article.destroy
+   # redirect_to article_path 
+
     @article.destroy
     respond_to do |format|
       format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
