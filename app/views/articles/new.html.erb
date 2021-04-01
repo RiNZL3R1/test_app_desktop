@@ -1,5 +1,11 @@
 <h1>New Article</h1>
 
+
+<%= render 'form', article: @article %>
+<!--
+<%= link_to 'Back', articles_path %>
+-->
+<!--
 <%if @article.errors.any? %>
     <h2>The following errors prevented the article from being saved</h2>
     <ul>
@@ -10,11 +16,7 @@
 <% end %>
 
 
-<!--
-<%= render 'form', article: @article %>
 
-<%= link_to 'Back', articles_path %>
--->
 <%=form_with scope: :article, url: articles_path, local: true do |f|%>
 
 <p>
@@ -31,7 +33,7 @@
     <%=f.submit%>
 </p>
 
-<% end %>
+<% end %>-->
 
 <br>
 

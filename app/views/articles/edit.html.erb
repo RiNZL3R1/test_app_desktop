@@ -1,13 +1,13 @@
-<!--
+
 <h1>Editing Article</h1>
 
 <%= render 'form', article: @article %>
 
 <%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
--->
+<%= link_to 'Back', articles_path %> |
 
 
+<!-- _form.html.erb den aldıgından gerek yok 
 <h1>Edit Article</h1>
 
 <%if @article.errors.any? %>
@@ -37,8 +37,8 @@
      <%=f.submit%>
     </p>
 
-<% end %>
+<% end %>-->
 
-<br>
 
-| <%= link_to 'Cancel and return to articles listing', articles_path %> |
+
+ <%= link_to 'Cancel and return to articles listing', articles_path %> |
