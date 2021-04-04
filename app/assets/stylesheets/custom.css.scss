@@ -1,0 +1,53 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+
+    background-color: black !important;
+    
+}
+
+.nav-link {
+     color:white !important;
+}
+
+/*.navbar-brand{
+    color: red !important;
+}*/
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: rgb(255, 136, 0);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+    
+}
+
+#home_container{
+    margin-top: 25px;
+}
+
+.jumbotron{
+    background-image: asset-url('patrick-fore-0gkw_9fy0eQ-unsplash.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 425px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
