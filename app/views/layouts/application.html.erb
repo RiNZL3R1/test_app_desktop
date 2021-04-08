@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>TestApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,12 +12,10 @@
   <body class="d-flex flex-column">
  
     <%=render 'layouts/navigation'%>
-    <%=render 'layouts/messages'%>
-    
-  <!--
-     <%flash.each do |name, msg| %>
-        <%=msg%>
-     <%end%>  bkz. articles_controller.rb   create   -->
-    <%= yield %> 
+    <div id="page-content">
+      <%=render 'layouts/messages'%>
+      <%= yield %> 
+    </div>
+    <%=render 'layouts/footer'%>
   </body>
 </html>
